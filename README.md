@@ -19,7 +19,7 @@ The portfolio contains my credentials, experiences, personal projects.
 
 ### Built With
 
-[![React][React.js]] [![Tailwind][Tailwind.icon]]
+![React][React.js]![Tailwind][Tailwind.icon]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
