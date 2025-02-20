@@ -19,11 +19,9 @@ The portfolio contains my credentials, experiences, personal projects.
 
 ### Built With
 
-[![React][React.js]][React-url] [![Tailwind][Tailwind.icon]][Tailwind-url]
+[![React][React.js]] [![Tailwind][Tailwind.icon]]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
 [Tailwind.icon]: https://img.shields.io/badge/TailwindCSS-563D7C?style=for-the-badge&logo=tailwindcss&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/
