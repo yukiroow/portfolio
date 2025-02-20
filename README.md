@@ -15,7 +15,7 @@
 ## About The Project
 
 This repository contains the source code for my Portfolio.
-The portfolio contains my credentials, experiences, and personal projects.
+The portfolio contains my credentials, experiences, personal projects.
 
 ### Built With
 
