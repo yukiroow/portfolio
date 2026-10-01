@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MainPanel from "./panels/MainPanel";
+import ContentPanel from "./panels/ContentPanel";
 import ThemeSelector from "./components/ThemeSelector";
 import DynamicBg from "./components/DynamicBg";
 
@@ -18,8 +19,19 @@ const App = () => {
         <>
             <DynamicBg theme={theme} />
             <ThemeSelector theme={theme} setTheme={setTheme} />
-            <div className="h-screen w-screen">
-                <MainPanel theme={theme} content={content} setContent={setContent}/>
+            <div className="flex h-screen w-screen overflow-hidden">
+                <MainPanel
+                    theme={theme}
+                    content={content}
+                    setContent={setContent}
+                />
+                {content !== "none" && (
+                    <ContentPanel
+                        theme={theme}
+                        content={content}
+                        setContent={setContent}
+                    />
+                )}
             </div>
         </>
     );
