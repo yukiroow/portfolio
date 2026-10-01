@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import MainPanel from "./MainPanel";
-import ThemeSelector from "./ThemeSelector";
-import DynamicBg from "./DynamicBg";
+import MainPanel from "./panels/MainPanel";
+import ThemeSelector from "./components/ThemeSelector";
+import DynamicBg from "./components/DynamicBg";
 
 const App = () => {
     const [theme, setTheme] = useState(localStorage.getItem("theme"));
