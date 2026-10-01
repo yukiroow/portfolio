@@ -1,9 +1,14 @@
-const MainPanel = ({ theme }) => {
+const menuBaseStyle =
+    "hover:translate-x-1 hover:font-normal hover:opacity-90";
+const menuSelectedStyle =
+    "translate-x-1 font-normal opacity-90";
+// opacity-70 transition-all
+const MainPanel = ({ theme, content, setContent }) => {
     return (
         <div className={`h-full w-full p-10`}>
-            <div className="grid h-full w-1/2 grid-cols-3">
+            <div className="grid h-full w-1/2 grid-cols-3 font-extralight">
                 <div
-                    className={`col-span-2 mt-[20%] flex h-full w-full flex-col gap-3 font-extralight ${theme === "dark" ? "text-purple-200" : " "}`}
+                    className={`col-span-2 mt-[20%] flex h-full w-full flex-col gap-3 ${theme === "dark" ? "text-purple-200" : " "}`}
                 >
                     <p className="animate-fade-in-right">Hi there! I am</p>
                     <h1 className="animate-fade-in-right text-7xl font-bold">
@@ -31,21 +36,24 @@ const MainPanel = ({ theme }) => {
                     </div>
                 </div>
                 <div
-                    className={`col-span-2 flex h-full w-full flex-col-reverse text-lg font-extralight ${theme === "dark" ? "text-purple-200" : ""}`}
+                    className={`col-span-2 flex h-full w-full flex-col-reverse text-lg ${theme === "dark" ? "text-purple-200" : ""}`}
                 >
-                    <div className="animate-fade-in-right flex cursor-pointer flex-col">
+                    <div className="animate-fade-in-right flex cursor-pointer flex-col opacity-70">
                         <p
-                            className={`opacity-70 transition-all hover:translate-x-1 hover:font-normal hover:opacity-90`}
+                            className={`transition-all ${content === "projects" ? menuSelectedStyle : menuBaseStyle}`}
+                            onClick={() => setContent("projects")}
                         >
                             Projects
                         </p>
                         <p
-                            className={`opacity-70 transition-all hover:translate-x-1 hover:font-normal hover:opacity-90`}
+                            className={`transition-all ${content === "about" ? menuSelectedStyle : menuBaseStyle}`}
+                            onClick={() => setContent("about")}
                         >
                             About Me
                         </p>
                         <p
-                            className={`opacity-70 transition-all hover:translate-x-1 hover:font-normal hover:opacity-90`}
+                            className={`transition-all ${content === "contact" ? menuSelectedStyle : menuBaseStyle}`}
+                            onClick={() => setContent("contact")}
                         >
                             Contact
                         </p>
