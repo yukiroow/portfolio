@@ -9,7 +9,6 @@ const MainPanel = ({ theme, content, setContent }) => {
             <div
                 className={`h-full ${content === "none" ? "grid grid-cols-3 font-extralight" : "flex flex-col gap-10"} `}
             >
-                
                 <div
                     className={`${content === "none" ? "col-span-2 mt-[20%] flex h-full w-full flex-col gap-3" : "mt-[30%]"} ${theme === "dark" ? "text-purple-200" : ""}`}
                 >
@@ -19,7 +18,7 @@ const MainPanel = ({ theme, content, setContent }) => {
                     >
                         Harry Dominguez Jr.
                     </h1>
-                    <div className="w-3/4 mt-4">
+                    <div className="mt-4 w-3/4">
                         <p
                             className={`animate-fade-in-right text-justify transition-all ${content === "none" ? "text-xl" : "text-sm"}`}
                         >
@@ -47,18 +46,18 @@ const MainPanel = ({ theme, content, setContent }) => {
                 <div
                     className={`${content === "none" ? "col-span-2 flex h-full w-full flex-col-reverse text-lg" : ""} ${theme === "dark" ? "text-purple-200" : ""}`}
                 >
-                    <div className="animate-fade-in-right flex font-extralight cursor-pointer flex-col opacity-70">
-                        <p
-                            className={`transition-all ${content === "projects" ? menuSelectedStyle : menuBaseStyle}`}
-                            onClick={() => setContent("projects")}
-                        >
-                            Projects
-                        </p>
+                    <div className="animate-fade-in-right flex cursor-pointer flex-col font-extralight opacity-70">
                         <p
                             className={`transition-all ${content === "about" ? menuSelectedStyle : menuBaseStyle}`}
                             onClick={() => setContent("about")}
                         >
                             About Me
+                        </p>
+                        <p
+                            className={`transition-all ${content === "projects" ? menuSelectedStyle : menuBaseStyle}`}
+                            onClick={() => setContent("projects")}
+                        >
+                            Projects
                         </p>
                         <p
                             className={`transition-all ${content === "contact" ? menuSelectedStyle : menuBaseStyle}`}
