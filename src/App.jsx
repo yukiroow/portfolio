@@ -17,7 +17,7 @@ const App = () => {
 
     return (
         <>
-            <DynamicBg theme={theme} />
+            <DynamicBg theme={theme} content={content} />
             <ThemeSelector theme={theme} setTheme={setTheme} />
             <div className="flex h-screen w-screen overflow-hidden">
                 <MainPanel

@@ -1,6 +1,6 @@
 const menuBaseStyle = "hover:translate-x-1 hover:font-normal hover:opacity-90";
 const menuSelectedStyle = "translate-x-1 font-normal opacity-90";
-// opacity-70 transition-all
+
 const MainPanel = ({ theme, content, setContent }) => {
     return (
         <div

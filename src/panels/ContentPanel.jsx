@@ -1,26 +1,31 @@
 import { PanelRightClose } from "lucide-react";
+import Projects from "../content/Projects";
+import About from "../content/About";
+import Contact from "../content/Contact";
 
 const ContentPanel = ({ theme, content, setContent }) => {
     return (
         <>
             <div className={`h-full w-full py-4`}>
                 <div
-                    className={`animate-slide-in-right relative h-full w-full rounded-l-2xl p-18 ${theme === "light" ? "bg-amber-100" : ""}`}
+                    className={`animate-slide-in-right relative h-full w-full rounded-l-2xl p-12 ${theme === "light" ? "pale-yellow-grid text-black" : "pale-purple-dots text-purple-100"}`}
                 >
                     {content !== "none" && (
-                        <div className="absolute top-4 left-2 cursor-pointer items-end justify-end transition-all hover:opacity-90">
+                        <div
+                            className={`animate-fade-in absolute top-4 left-2 cursor-pointer items-end justify-end rounded-md p-1 ${theme === "light" ? "bg-amber-100" : "bg-purple-900"}`}
+                        >
                             <PanelRightClose
-                                className={`animate-fade-in h-6 w-6 ${theme === "light" ? "text-black" : "text-purple-100"}`}
+                                className={`h-6 w-6 opacity-50 transition-all hover:opacity-20 ${theme === "light" ? "" : ""}`}
                                 onClick={() => setContent("none")}
                             />
                         </div>
                     )}
                     {content === "projects" ? (
-                        <div>Projects</div>
+                        <Projects theme={theme} />
                     ) : content === "about" ? (
-                        <div>About</div>
+                        <About theme={theme} />
                     ) : (
-                        <div>Contact</div>
+                        <Contact theme={theme} />
                     )}
                 </div>
             </div>
