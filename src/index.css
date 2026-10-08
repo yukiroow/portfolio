@@ -57,15 +57,9 @@
     );
     background-size: 56px 56px;
 }
-.pale-purple-dots {
-    background-color: #740391;
-    background-image: radial-gradient(#b501da 2px, transparent 2px);
-    background-size: 24px 24px;
-}
 
 .ambient-glow-box {
     background: linear-gradient(45deg, #2f0d68, #101828);
-    border-radius: 16px;
 
     animation: cycle-hue 12s linear infinite;
 }
@@ -77,57 +71,6 @@
     100% {
         filter: hue-rotate(360deg);
     }
-}
-
-.content-surface {
-    position: relative;
-    isolation: isolate;
-}
-
-/* Softened grid that sits BEHIND the content */
-.content-surface::before {
-    content: "";
-    position: absolute;
-    inset: -1rem;
-    z-index: -1;
-    border-radius: 1rem;
-    background-color: #fdfbf2;
-    background-image: linear-gradient(
-        45deg,
-        #f7f2df 25%,
-        transparent 25%,
-        transparent 50%,
-        #f7f2df 50%,
-        #f7f2df 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 56px 56px;
-    /* Feather all four edges into the parent grid */
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        black 65%,
-        transparent 100%
-    );
-    mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
-}
-
-.content-surface-dark::before {
-    content: "";
-    position: absolute;
-    inset: -1rem;
-    z-index: -1;
-    border-radius: 1rem;
-    background-color: #1a0b2e;
-    /* Keep your existing pale-purple-dots pattern here,
-       or a softened variant */
-    opacity: 0.85;
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        black 65%,
-        transparent 100%
-    );
-    mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
 }
 
 * {
