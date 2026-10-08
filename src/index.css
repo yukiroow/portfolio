@@ -156,8 +156,3 @@
 *::-webkit-scrollbar-corner {
     background: transparent;
 }
-
-@theme {
-    /* Overrides the default font-sans stack */
-    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}

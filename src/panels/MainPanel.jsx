@@ -46,7 +46,7 @@ const MainPanel = ({ theme, content, setContent }) => {
                 <div
                     className={`${content === "none" ? "col-span-2 flex h-full w-full flex-col-reverse text-lg" : ""} ${theme === "dark" ? "text-purple-200" : ""}`}
                 >
-                    <div className="animate-fade-in-right flex cursor-pointer flex-col font-extralight opacity-70">
+                    <div className="animate-fade-in-right flex cursor-pointer flex-col opacity-70">
                         <p
                             className={`transition-all ${content === "about" ? menuSelectedStyle : menuBaseStyle}`}
                             onClick={() => setContent("about")}
